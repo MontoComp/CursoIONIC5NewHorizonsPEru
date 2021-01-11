@@ -1,0 +1,11 @@
+ion-item{
+    border-radius: 5px;
+    border-color: rgb(201, 201, 201);
+    border-width: 2px;
+    border-style: solid;
+    margin: 7px 7px 7px 7px;
+}
+.validation-messages{
+    padding-inline-start: 16px;
+    color: var(--ion-color-danger);
+}

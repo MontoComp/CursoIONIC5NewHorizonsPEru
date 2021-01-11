@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">My First Application</string>
+    <string name="title_activity_main">My First Application</string>
+    <string name="package_name">com.newhorizons.myfirstapp</string>
+    <string name="custom_url_scheme">com.newhorizons.myfirstapp</string>
+</resources>

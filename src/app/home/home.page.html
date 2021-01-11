@@ -1,20 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Principal</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content class="ion-padding ion-text-center ion-margin">
+  <ion-searchbar animated (ionChange)="search($event)"></ion-searchbar>
+  <div *ngIf="isskeleton===false">
+    <ion-card *ngFor="let place of placesFound | filtro:textsearch" (click)="showDetailPlace(place)">
+      <img src="assets/images/logo-h.png">
+      <ion-card-header>
+        <ion-card-subtitle>{{cityFound.name.toUpperCase()}}</ion-card-subtitle>
+        <ion-card-title>{{place.name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Rating: {{place.rate}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="isskeleton===true" >
+    <ion-card *ngFor="let place of placesFound">
+      <div class="img-banner-skeleton">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </div>
+      <ion-card-header>
+        <ion-card-subtitle>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </ion-card-subtitle>
+        <ion-card-title>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </ion-card-title>
+        <ion-card-content>
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </ion-card-content>
+      </ion-card-header>
+    </ion-card>
   </div>
 </ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Mi Perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <ion-avatar (click)="takePhoto()">
+    <img [src]="urlAvatar" *ngIf="!photo"/>
+    <img [src]="photo" *ngIf="photo"/>
+  </ion-avatar>
+  <div *ngIf="myuser">
+    <h1>{{myuser.firstName +' '+ myuser.lastName}}</h1>
+    <h2>{{myuser.email}}</h2>
+  </div>
+  <div *ngIf="!myuser">
+    <h1>User</h1>
+    <h2>user@gmail.com</h2>
+  </div>
+</ion-content>
