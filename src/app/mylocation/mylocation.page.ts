@@ -19,8 +19,8 @@ export class MylocationPage {
     await this.getCurrentPosition();
   }*/
 
-  ionViewDidEnter(){
-    this.getCurrentPosition();
+  async ionViewDidEnter(){
+    await this.getCurrentPosition();
   }
 
   async getCurrentPosition(){

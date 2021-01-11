@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "23212313",
+      "firstName": "Jean",
+      "lastName": "Montoya",
+      "email": "jean@gmail.com",
+      "password": "MTIzNDU2"
+    },
+    {
+      "firstName": "Miguel",
+      "lastName": "Montoya",
+      "email": "miguel@gmail.com",
+      "password": "MTIzNDU2",
+      "id": "fVj25SS"
+    },
+    {
+      "firstName": "Jorge",
+      "lastName": "Mendoza",
+      "email": "jorge@gmail.com",
+      "password": "MTIzNDU2",
+      "id": "MbDp0Yh"
+    }
+  ]
+}
